@@ -270,6 +270,15 @@ for _, v in pairs(game.Players:GetChildren()) do
     end
 end
 
+_G.AntiBallBaller = true -- Ensure this is true before running
+
+for i, v in pairs(game.Workspace:GetChildren()) do
+    if v.Name == "ClonedBall" then
+        v.CanTouch = false
+        v.CanCollide = true
+    end
+end
+
 -- Music
 local player = game.Players.LocalPlayer
 
