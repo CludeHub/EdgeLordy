@@ -552,6 +552,37 @@ local function preventRagdoll()
     end
 end
 
+local player = game.Players.LocalPlayer
+
+-- Disable all functions if the player dies
+player.CharacterAdded:Connect(function()
+    -- Wait for the player's character to fully load
+    local character = player.Character or player.CharacterAdded:Wait()
+
+    -- Set all toggles to false (disabling their functionality)
+    _G.AntiRock = false
+    _G.AntiSbeve = false
+    _G.AntiBallBaller = false
+    _G.AntiBus = false
+    _G.AntiLure = false
+    _G.AntiMail = false
+    _G.AntiBooster = false
+    _G.AntiSquid = false
+    _G.AntiBrick = false
+    _G.AntiRagdoll = false
+    _G.AntiNull = false
+    _G.AntiBrazil = false
+    _G.AntiZaHando = false
+    _G.AntiFort = false
+    _G.AntiReaper = false
+    _G.AntiPusher = false
+    _G.NoclipBarrier = false
+    _G.AntiPlank = false
+    _G.AntiBubble = false
+    _G.AntiStun = false
+    _G.AutoExit = false
+end)
+
 -- Music
 local player = game.Players.LocalPlayer
 
