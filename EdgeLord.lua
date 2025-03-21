@@ -249,20 +249,31 @@ tpTool.Activated:Connect(function()
     end
 end)
 
-local Sound = Instance.new("Sound")
-Sound.Parent = game.Workspace
-Sound.SoundId = "rbxassetid://9133844756"
-Sound.Volume = 50
-Sound.Looped = true
-Sound:Play()
-
 local player = game.Players.LocalPlayer
 
--- Stop music when player dies
-player.CharacterAdded:Connect(function(char)
-    local humanoid = char:WaitForChild("Humanoid")
+local function playMusic()
+    local char = player.Character or player.CharacterAdded:Wait()
+    local Sound = Instance.new("Sound")
+    Sound.Parent = char
+    Sound.SoundId = "rbxassetid://9133844756"
+    Sound.Volume = 10 -- Lowered volume to a reasonable level
+    Sound.Looped = true
+    Sound:Play()
 
-    humanoid.Died:Connect(function()
-        Sound:Stop()
-    end) 
-end) -- Fixed missing end statements
+    local humanoid = char:FindFirstChild("Humanoid")
+    if humanoid then
+        humanoid.Died:Connect(function()
+            Sound:Stop()
+            Sound:Destroy()
+        end)
+    end
+end
+
+-- Play music when the script runs
+playMusic()
+
+-- Restart music when the player respawns
+player.CharacterAdded:Connect(function()
+    task.wait(1) -- Small delay to prevent issues
+    playMusic()
+end)
