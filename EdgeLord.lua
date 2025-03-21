@@ -260,6 +260,16 @@ for _, v in pairs(game.Players:GetChildren()) do
     end
 end
 
+_G.AntiSbeve = true -- Ensure this is true before running
+
+for _, v in pairs(game.Players:GetChildren()) do
+    if v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("stevebody") then
+        v.Character:FindFirstChild("stevebody").CanTouch = false
+        v.Character:FindFirstChild("stevebody").CanQuery = false
+        v.Character:FindFirstChild("stevebody").CanCollide = false
+    end
+end
+
 -- Music
 local player = game.Players.LocalPlayer
 
