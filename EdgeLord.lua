@@ -32,11 +32,6 @@ local enurl = "VVZGMVYyTXhVWGhPV0VVZGMVYyTXhVWGhPV0VwU1pXeHNiMGxyYUVkaVJXeFRVMVp
 -- EdgeLord Slap Battle --
 -- Edgelord made by CludeHub/Paras/Paul/LordClude
 
-game:GetService("Players").LocalPlayer.Reset:FireServer()
-wait(4.5)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Origo.CFrame * CFrame.new(0,-5,0)
-wait(0.4)
-
 -- Services and Variables
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -377,8 +372,6 @@ for i, v in pairs(game.Workspace:GetChildren()) do
         v.CanQuery = false
     end
 end
-
-game.Players.LocalPlayer.PlayerScripts.Well.Disabled = Value
 
 _G.AntiBrazil = true -- Ensure this is true before running
 
