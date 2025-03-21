@@ -287,6 +287,271 @@ for i, v in pairs(game.Workspace:GetChildren()) do
     end
 end
 
+_G.AntiLure = true -- Ensure this is true before running
+
+for i, v in pairs(game.Workspace:GetChildren()) do
+    if string.find(v.Name, "_lure") and v:FindFirstChild("Root") and v:FindFirstChild("watercircle") then
+        v.Root.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        v.watercircle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    end
+end
+
+_G.AntiMail = true -- Ensure this is true before running
+
+if game.Players.LocalPlayer.Character:FindFirstChild("YouHaveGotMail") then
+    game.Players.LocalPlayer.Character.YouHaveGotMail.Disabled = true
+end
+
+_G.AntiBooster = true -- Ensure this is true before running
+
+for i, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+    if v.Name == "BoosterObject" then
+        v:Destroy()
+    end
+end
+
+_G.AntiSquid = true -- Ensure this is true before running
+
+if _G.AntiSquid == false then
+    game.Players.LocalPlayer.PlayerGui.SquidInk.Enabled = true
+else
+    if game.Players.LocalPlayer.PlayerGui:FindFirstChild("SquidInk") then
+        game.Players.LocalPlayer.PlayerGui.SquidInk.Enabled = false
+    end
+end
+
+game.Players.LocalPlayer.PlayerScripts.ConveyorVictimized.Disabled = Value
+
+if condition then -- Replace 'condition' with your specific condition
+    game.Players.LocalPlayer.PlayerScripts.VFXListener.NightmareEffect.Parent = game.Lighting
+else
+    game.Players.LocalPlayer.PlayerScripts.VFXListener.NightmareEffect.Parent = game.Players.LocalPlayer.PlayerScripts.VFXListener
+end
+
+_G.AntiIce = true -- Ensure this is true before running
+
+for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if v.Name == "Icecube" then
+        v:Destroy()
+        game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+        game.Players.LocalPlayer.Character.Humanoid.AutoRotate = true
+    end
+end
+
+_G.AntiTimestop = true -- Ensure this is true before running
+
+for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if v.ClassName == "Part" then
+        v.Anchored = false
+    end
+end
+
+_G.AntiNull = true -- Ensure this is true before running
+
+for i, v in pairs(game.Workspace:GetChildren()) do
+    if v.Name == "Imp" and v:FindFirstChild("Body") then
+        gloveHits[game.Players.LocalPlayer.leaderstats.Glove.Value]:FireServer(v.Body, true)
+    end
+end
+
+_G.AutoExit = true -- Ensure this is true before running
+
+if game.Players.LocalPlayer.Character:FindFirstChild("InLabyrinth") ~= nil then
+    for _, v in next, workspace:GetChildren() do
+        if string.find(v.Name, "Labyrinth") and v:FindFirstChild("Doors") then
+            for _, y in ipairs(v.Doors:GetChildren()) do
+                if y:FindFirstChild("Hitbox") and y.Hitbox:FindFirstChild("TouchInterest") then
+                    firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"), y.Hitbox, 0)
+                    firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"), y.Hitbox, 1)
+                end
+            end
+        end
+    end
+end
+
+_G.AntiBrick = true -- Ensure this is true before running
+
+for i, v in pairs(game.Workspace:GetChildren()) do
+    if v.Name == "Union" then
+        v.CanTouch = false
+        v.CanQuery = false
+    end
+end
+
+game.Players.LocalPlayer.PlayerScripts.Well.Disabled = Value
+
+_G.AntiBrazil = true -- Ensure this is true before running
+
+-- Function to disable touch on Brazil objects
+local function disableBrazilTouch()
+    for i, v in pairs(game.Workspace.Lobby.brazil:GetChildren()) do
+        if v.CanTouch == true then
+            v.CanTouch = false
+        end
+    end
+end
+
+-- Function to enable touch on Brazil objects
+local function enableBrazilTouch()
+    for i, v in pairs(game.Workspace.Lobby.brazil:GetChildren()) do
+        if v.CanTouch == false then
+            v.CanTouch = true
+        end
+    end
+end
+
+-- Example of button function triggers
+-- You can call either disableBrazilTouch() or enableBrazilTouch() when the button is pressed
+
+_G.AntiZaHando = true
+
+local function destroyParts()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v.ClassName == "Part" and v.Name == "Part" then
+            v:Destroy()
+        end
+    end
+end
+
+_G.AntiFort = true
+
+local function disableCollide()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v.Name == "Part" then
+            v.CanCollide = false
+        end
+    end
+end
+
+_G.AntiReaper = true
+
+local function removeDeathMark()
+    for i, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+        if v.Name == "DeathMark" then
+            game:GetService("ReplicatedStorage").ReaperGone:FireServer(game:GetService("Players").LocalPlayer.Character.DeathMark)
+            game:GetService("Lighting"):WaitForChild("DeathMarkColorCorrection"):Destroy()
+        end
+    end
+end
+
+_G.AntiPusher = true
+
+local function disableWallCollide()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if v.Name == "wall" then
+            v.CanCollide = false
+        end
+    end
+end
+
+_G.NoclipBarrier = true
+
+local function disableBarrierCollide()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if string.find(v.Name, "ÅBarrier") then
+            if v.CanCollide == true then
+                v.CanCollide = false
+            end
+        end
+    end
+end
+
+local function enableBarrierCollide()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if string.find(v.Name, "ÅBarrier") then
+            if v.CanCollide == false then
+                v.CanCollide = true
+            end
+        end
+    end
+end
+
+_G.AntiPlank = true
+
+local function disablePlankTouch()
+    for i, v in pairs(game.Workspace:GetChildren()) do
+        if string.find(v.Name, "'s Plank") and v.ClassName == "Part" then
+            v.CanTouch = false
+            v.CanQuery = false
+        end
+    end
+end
+
+_G.AntiBubble = true
+
+local function removeBubbleWeld()
+    for i, v in pairs(workspace:GetChildren()) do
+        if v.Name == "BubbleObject" and v:FindFirstChild("Weld") then
+            v:FindFirstChild("Weld"):Destroy()
+        end
+    end
+end
+
+_G.AntiStun = true
+
+local function removePlatformStand()
+    if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Workspace:FindFirstChild("Shockwave") and game.Players.LocalPlayer.Character.Ragdolled.Value == false then
+        game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+    end
+end
+
+local function toggleCubeOfDeathTouch(Value)
+    if Value == true then
+        if game.Workspace:FindFirstChild("the cube of death(i heard it kills)", 1) and game.Workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"]:FindFirstChild("Part") then
+            game.Workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"].CanTouch = false
+            game.Workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"].Part.CanTouch = false
+        end
+    else
+        if game.Workspace:FindFirstChild("the cube of death(i heard it kills)", 1) and game.Workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"]:FindFirstChild("Part") then
+            game.Workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"].CanTouch = true
+            game.Workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"].Part.CanTouch = true
+        end
+    end
+end
+
+local function toggleBarrierTouch(Value)
+    if Value == true then
+        for i, v in pairs(game.Workspace.DEATHBARRIER:GetChildren()) do
+            if v.ClassName == "Part" and v.Name == "BLOCK" then
+                v.CanTouch = false
+            end
+        end
+        game.Workspace.DEATHBARRIER.CanTouch = false
+        game.Workspace.DEATHBARRIER2.CanTouch = false
+        game.Workspace.dedBarrier.CanTouch = false
+        game.Workspace.ArenaBarrier.CanTouch = false
+        game.Workspace.AntiDefaultArena.CanTouch = false
+    else
+        for i, v in pairs(game.Workspace.DEATHBARRIER:GetChildren()) do
+            if v.ClassName == "Part" and v.Name == "BLOCK" then
+                v.CanTouch = true
+            end
+        end
+        game.Workspace.DEATHBARRIER.CanTouch = true
+        game.Workspace.DEATHBARRIER2.CanTouch = true
+        game.Workspace.dedBarrier.CanTouch = true
+        game.Workspace.ArenaBarrier.CanTouch = true
+        game.Workspace.AntiDefaultArena.CanTouch = true
+    end
+end
+
+_G.AntiRagdoll = true
+
+local function preventRagdoll()
+    if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and game.Players.LocalPlayer.Character:FindFirstChild("Torso") and game.Players.LocalPlayer.Character:FindFirstChild("Ragdolled") then
+        if game.Players.LocalPlayer.Character:FindFirstChild("Ragdolled") and game.Players.LocalPlayer.Character:WaitForChild("Ragdolled").Value == true then
+            repeat task.wait()
+                if game.Players.LocalPlayer.Character:FindFirstChild("Torso") then
+                    game.Players.LocalPlayer.Character.Torso.Anchored = true
+                end
+            until game.Players.LocalPlayer.Character:FindFirstChild("Ragdolled") and game.Players.LocalPlayer.Character:WaitForChild("Ragdolled").Value == false
+            if game.Players.LocalPlayer.Character:FindFirstChild("Torso") then
+                game.Players.LocalPlayer.Character.Torso.Anchored = false
+            end
+        end
+    end
+end
+
 -- Music
 local player = game.Players.LocalPlayer
 
