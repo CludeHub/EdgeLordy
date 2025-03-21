@@ -279,6 +279,14 @@ for i, v in pairs(game.Workspace:GetChildren()) do
     end
 end
 
+_G.AntiBus = true -- Ensure this is true before running
+
+for i, v in pairs(game.Workspace:GetChildren()) do
+    if v.Name == "BusModel" then
+        v.CanTouch = false
+    end
+end
+
 -- Music
 local player = game.Players.LocalPlayer
 
