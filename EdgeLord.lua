@@ -249,6 +249,18 @@ tpTool.Activated:Connect(function()
     end
 end)
 
+-- Antis
+
+_G.AntiRock = true -- Ensure this is true before running
+
+for _, v in pairs(game.Players:GetChildren()) do
+    if v.Character and v.Character:FindFirstChild("rock") then
+        v.Character:FindFirstChild("rock").CanTouch = false
+        v.Character:FindFirstChild("rock").CanQuery = false
+    end
+end
+
+-- Music
 local player = game.Players.LocalPlayer
 
 local function playMusic()
