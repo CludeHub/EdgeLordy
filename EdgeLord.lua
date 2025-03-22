@@ -122,7 +122,7 @@ local function setupCharacter(character)
                     ColorSequenceKeypoint.new(0.5, Color3.fromRGB(21, 42, 148)),
                     ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 50, 148))
                 })
-                glitchParticle.LightEmission = 0.9
+                glitchParticle.LightEmission = 0.8
                 glitchParticle.Size = NumberSequence.new(1)
                 glitchParticle.Lifetime = NumberRange.new(0.1)
                 glitchParticle.Rate = 135
@@ -244,7 +244,6 @@ tpTool.Activated:Connect(function()
     end
 end)
 
--- Music
 local player = game.Players.LocalPlayer
 
 local function playMusic()
@@ -252,24 +251,16 @@ local function playMusic()
     local Sound = Instance.new("Sound")
     Sound.Parent = char
     Sound.SoundId = "rbxassetid://9133844756"
-    Sound.Volume = 10 -- Lowered volume to a reasonable level
+    Sound.Volume = 10
     Sound.Looped = true
     Sound:Play()
 
     local humanoid = char:FindFirstChild("Humanoid")
     if humanoid then
         humanoid.Died:Connect(function()
-            Sound:Stop()
-            Sound:Destroy()
+            Sound:Destroy() -- Stop the music when the player dies
         end)
     end
 end
 
--- Play music when the script runs
 playMusic()
-
--- Restart music when the player respawns
-player.CharacterAdded:Connect(function()
-    task.wait(1) -- Small delay to prevent issues
-    playMusic()
-end)
