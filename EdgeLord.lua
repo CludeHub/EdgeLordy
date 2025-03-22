@@ -221,3 +221,59 @@ player.Chatted:Connect(function(msg)
     end
 end)
 
+local player = game:GetService("Players").LocalPlayer
+
+local function setNametag(text)
+    local character = player.Character or player.CharacterAdded:Wait()
+    local head = character:FindFirstChild("Head")
+
+    if head then  
+        local existingTag = head:FindFirstChild("Nametag")  
+        if existingTag then  
+            existingTag:Destroy()  
+        end  
+
+        local billboard = Instance.new("BillboardGui")  
+        billboard.Name = "Nametag"  
+        billboard.Size = UDim2.new(3, 0, 1, 0)  
+        billboard.StudsOffset = Vector3.new(0, 2.5, 0)  
+        billboard.Adornee = head  
+        billboard.Parent = head  
+
+        local textLabel = Instance.new("TextLabel")  
+        textLabel.Size = UDim2.new(1, 0, 1, 0)  
+        textLabel.BackgroundTransparency = 1  
+        textLabel.Text = text  
+        textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)  
+        textLabel.TextStrokeTransparency = 0  
+        textLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)  
+        textLabel.TextScaled = true  
+        textLabel.Font = Enum.Font.SourceSansBold  
+        textLabel.Parent = billboard  
+    end
+end
+
+-- This function will be called when the player's character respawns
+local function onCharacterAdded(character)
+    local name = player.Name  -- or any default name
+    setNametag(name)
+end
+
+-- Listen for the player's character respawn
+player.CharacterAdded:Connect(onCharacterAdded)
+
+-- Initial nametag setup in case the player is already in the game
+if player.Character then
+    onCharacterAdded(player.Character)
+end
+
+-- Handling custom name change via chat command
+player.Chatted:Connect(function(msg)
+    local args = string.split(msg, " ")
+    if args[1] == "/e" and args[2] == "setname" then
+        local name = msg:sub(#"/e setname " + 1)
+        if name and name ~= "" then
+            setNametag(name)
+        end
+    end
+end)
