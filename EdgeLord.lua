@@ -116,13 +116,13 @@ local function setupCharacter(character)
 
                 local glitchParticle = Instance.new("ParticleEmitter")
                 glitchParticle.Texture = "rbxassetid://3876444567"
-                glitchParticle.Brightness = 4
+                glitchParticle.Brightness = 0.9
                 glitchParticle.Color = ColorSequence.new({
                     ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 22, 42)),
                     ColorSequenceKeypoint.new(0.5, Color3.fromRGB(21, 42, 148)),
                     ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 50, 148))
                 })
-                glitchParticle.LightEmission = 0.7
+                glitchParticle.LightEmission = 0.9
                 glitchParticle.Size = NumberSequence.new(1)
                 glitchParticle.Lifetime = NumberRange.new(0.1)
                 glitchParticle.Rate = 135
