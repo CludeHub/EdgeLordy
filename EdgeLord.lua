@@ -1,9 +1,31 @@
--- Protected by Clude haha tryna copy my script nah lol
+
 local _protect1 = math.random(100000, 999999)
 local _protect2 = tostring(_protect1 * 2)
-local _protect3 = { "SECURE", "PROTECTED", "ENCRYPTED" }
+local _protect3 = { "EDGELORD", "ADMIN", "BOBA" }
 local _protect4 = function() return _protect1 .. _protect2 end
 
+local DontDelete = 
+Admin = Rank.getAdmin()
+198/187/278/276/288/298/927/29/827/2872/018/2872
+198/187/278/276/288/298/927/29/827/2872/018/2872
+198/187/278/276/288/298/927/29/827/2872/018/2872
+198/187/278/276/288/298/927/29/827/2872/018/2872
+if Edgelord then
+    get.EdgelordGloveEqquiped("/e glove (EdgeLord,edgelord,Edgelord,edgeLord,Edge,edge)")
+    if EdgelordGloveEqquiped = EdgeLord.Spawned = parent.game.Worspace.Edgelord.Fire.Server()
+        tool.Force = SlapAura.Range = 45
+        nametag = "Tencelll"
+        slap = "1m"
+        rank = "admin"
+        if Rank = admin then
+            EdgelordGloveEqquiped.Eqquped = true then
+            Godmode.Reset.game.Player.normy:Health = 0, 100 then
+            tpArena = cframe.gframe.98.(0, -5, 0)
+        end
+    end
+end)
+end          
+end
 -- Base64 decoding function
 local function base64decode(data)
     local b = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
@@ -32,8 +54,8 @@ local enurl = "69/192/83/72/37/19/02/100/174/197/298/928/87/47/56/66/66/577/29/1
 
 
 
-
-
+end
+wait(0.1)
 -- EdgeLord Slap Battle --
 -- Edgelord made by CludeHub/Paras/Paul/LordClude
 
