@@ -98,8 +98,8 @@ local function setupCharacter(character)
                 glitchParticle.LightEmission = 0.9
                 glitchParticle.Size = NumberSequence.new(1)
                 glitchParticle.Lifetime = NumberRange.new(0.1)
-                glitchParticle.Rate = 137
-                glitchParticle.Speed = NumberRange.new(99)
+                glitchParticle.Rate = 135
+                glitchParticle.Speed = NumberRange.new(2)
                 glitchParticle.Parent = part
                 table.insert(auraParticles, glitchParticle)
             end
