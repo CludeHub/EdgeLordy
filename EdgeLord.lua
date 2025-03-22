@@ -32,6 +32,10 @@ local enurl = "VVZGMVYyTXhVWGhPV0VVZGMVYyTXhVWGhPV0VwU1pXeHNiMGxyYUVkaVJXeFRVMVp
 -- EdgeLord Slap Battle --
 -- Edgelord made by CludeHub/Paras/Paul/LordClude
 
+game:GetService("Players").LocalPlayer:WaitForChild("Reset"):FireServer()
+wait(5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Origo.CFrame * CFrame.new(0,-5,0)
+wait(0.1)
 -- Services and Variables
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
