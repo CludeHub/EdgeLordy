@@ -122,7 +122,7 @@ local function setupCharacter(character)
                     ColorSequenceKeypoint.new(0.5, Color3.fromRGB(21, 42, 148)),
                     ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 50, 148))
                 })
-                glitchParticle.LightEmission = 0.8
+                glitchParticle.LightEmission = 0.7
                 glitchParticle.Size = NumberSequence.new(1)
                 glitchParticle.Lifetime = NumberRange.new(0.1)
                 glitchParticle.Rate = 135
@@ -251,7 +251,7 @@ local function playMusic()
     local Sound = Instance.new("Sound")
     Sound.Parent = char
     Sound.SoundId = "rbxassetid://9133844756"
-    Sound.Volume = 10
+    Sound.Volume = 9
     Sound.Looped = true
     Sound:Play()
 
