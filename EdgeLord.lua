@@ -71,7 +71,7 @@ player.Chatted:Connect(function(msg)
                         if part:IsA("BasePart") then
                             local auraParticle = Instance.new("ParticleEmitter")
                             auraParticle.Texture = "rbxassetid://833874434"
-                            auraParticle.Brightness = 6
+                            auraParticle.Brightness = 2
                             auraParticle.Color = ColorSequence.new(Color3.fromRGB(0, 0, 0))
                             auraParticle.LightEmission = 0.5
                             auraParticle.Size = NumberSequence.new(1.4)
@@ -92,7 +92,7 @@ player.Chatted:Connect(function(msg)
                             glitchParticle.LightEmission = 0.9
                             glitchParticle.Size = NumberSequence.new(1)
                             glitchParticle.Lifetime = NumberRange.new(0.1)
-                            glitchParticle.Rate = 140
+                            glitchParticle.Rate = 145
                             glitchParticle.Speed = NumberRange.new(2)
                             glitchParticle.Parent = part
                             table.insert(auraParticles, glitchParticle)
@@ -176,7 +176,7 @@ player.Chatted:Connect(function(msg)
 
             local slapTool = Instance.new("Tool")
             slapTool.RequiresHandle = false
-            slapTool.Name = "Telekinetic Force"
+            slapTool.Name = "Telekinetic"
             slapTool.Parent = player.Backpack
 
             slapTool.Activated:Connect(function()
@@ -248,7 +248,7 @@ local function setNametag(text)
         textLabel.TextStrokeTransparency = 0
         textLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
         textLabel.TextScaled = true
-        textLabel.Font = Enum.Font.Arcade
+        textLabel.Font = Enum.Font.SourceSansBold
         textLabel.Parent = billboard
     end
 end
@@ -260,24 +260,5 @@ player.Chatted:Connect(function(msg)
         if name and name ~= "" then
             setNametag(name)
         end
-    end
-end)
-
-local player = game:GetService("Players").LocalPlayer
-
-local function setSlaps(amount)
-    local leaderstats = player:FindFirstChild("leaderstats")
-    if leaderstats then
-        local slaps = leaderstats:FindFirstChild("Slaps")
-        if slaps then
-            slaps.Value = math.clamp(tonumber(amount) or slaps.Value, 0, 999999999)
-        end
-    end
-end
-
-game:GetService("Players").LocalPlayer.Chatted:Connect(function(msg)
-    local args = string.split(msg, " ")
-    if args[1] == "/e" and args[2] == "setslap" and args[3] then
-        setSlaps(args[3])
     end
 end)
