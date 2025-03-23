@@ -1,1 +1,254 @@
-([[This file was protected with MoonSec V3]]):gsub('.+', (function(a) _nyiBZyECmAtt = a; end)); MKYsvQwTxuHurCxL=_ENV;sLcBXkndtJGrOED='Rh.l_XDpz4aNxy+KaaK_D++zDl+.XDy&_ax.X.NNXayzhpah.h4_k+zzDz+NDzyX_Nxp_DX4yy_xxD_8Nzlay.XNN__Jxp_XN..Da.K4pp+xDD+;Xz+DpD}hDDNylKN:.aa_hxaNlDxll44...ayh.D4+DXxyDXO.xNyl.4yNX.xaD.S4ah_z+Xhx.KKpDK/Da+_X+yzX.xx_4xrlaN_.+az..yaXD4h.hz_K+pzK2DyMDz.{_paKKpDKDD4y4_lyN__xN_axh.xNp._aphDaD+ND.yxXDyi_ax_.+KplXax.Da?ha4_x++ax.pyKypj+aD_yxDpK.py+aDy+ylXN..za.hx4_lya+lapKJDp.+xDDy+pz*hzDK8_lyXD+N_.xy:h+xN_XzK<DzFKap_++Dzx.4NypXDxa__N+aN.D4+HKz+9hhX4lYzz.Kxp_vlz+hN4hy4Xaxx_Dx,lzNDXxyX_KxklzxlZyz_K+pzK.Dx+DDMhaXXyp_zx.lxN_lzypXDyhlzNK.+aaehpKK_D++zD#Z.pDKxD+xX_.Nzl.axz4 zpN3DcK4.H.pxKDD+KyzzhXzNyyDx+pD_+XlXN_.za.hx4_lKNN.xaN.NplKhDD+qXa_zaK.aa+.hlpxa.aa_h+4Dh+Nal_ay=x4zh*zDK_zK*ppzKpDaK}lKya_Kx4__xph_xhlNNlKyz5KYDa+_Xx+ap_KyDa+_DpNaD.y>.lx_hD4GFaz.hh4Kha4+xXzX6.pKK..pKzXx+zcKy4XXxx_NND.+N4._4yyla_hY4XellXyxpzK.DNxaXDx+>XNX#x4XhDzzJ.pxK_4XhN4.=aD4yz_yxp_4Nal_a+.DyX_axz_lNN.xaNh+plK_DD+ZXay.XyKlD.K_Xa+hXxaX.p4zh.zxL_zK.zaDhD4NEazaOlXhy___N+lzNPlNyh_1y.lzNKj+ND._p4K;Da+_X+yzh.l+zDxh_.N_.+az.64+lyN0lyNp..4NKlpp+DD9yaX.+hDxK4DKNzX+yXX.xK5a4lhzzD{rpaK.p4hDz_KxzhyKpX+_pDyxDlay.aanha4_z.Mhp.+hKppX+aD_y+XDQzDx++plNNlpa+.za.zK1Np.zyo_p+Kzp.+xDDh4hayXXDxz_.Nxl_Nl_+yDXhx4_8x_3pzpKap_++DD+_zaLhp+KNlDNK_zN..xaDh+a7h_4plzzphapy..4K+NzNtpX_y+XxxhXXN_.+az.}azlDNl.+DlKKN%yhD+hh4_KypzKXpx+lhNNDXyxy*laylzxl.xNz>hz4K_D++zN4.K44_eNzPxN_.NpakNDxhhD_yXXXzN0.pxKDp6+a___y4z___xxD_wxxpza+.za._N4Dhmza(azpKzp.+x4X+9XNy__+xz_DK+lDNA.aylh+44h.zxlKzdKap_++Dz+.XxyDXaxa_XN+lzN..xaD.-aah_z+Gzz.KxppK{za._X+yzX.xx_DxNlaxDzaaz.l4xh+4;Yaz_h/p4K.D++DzKyaX_x+_++NlxN4lPax._4Khz4lMxzD#zpaK_D++4D.yxXDy,4xx__&Nzl_ax.pa%.xax{+zaC.alKDpT+apD+hXzyX_xyp_&Nal_x+.+a.hK4Dhlza.yp+8az++xDa+Ep_y__+xzD.xylDN_.aazh+4ah.4+hzzkKKp_KKDz+.XxKD4Axa_4N+lyN._laDl.x.h_4_%z4lKxpDKeza+XX+y+X.y._DxDlaN__4az.44xhD4v)az_hLzlK.p_+DDzyaX_x+XayhlxNKl^ya._4+hza_.zzD9apaKKD++zD.+;Xxy!X.x_X+Nzllax.DNphaa&G+zyH.pxKDp/KDD_+NXzyy_xxD_?Na_ha+l_a.h+4Dh.zam_zxKzp4+xph+ODDy_
+local intro = Instance.new("ScreenGui")
+intro.Parent = game.Players.LocalPlayer.PlayerGui
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Parent = intro
+textLabel.Text = "Made By Cludehub And Paras"
+textLabel.TextSize = 30
+textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+textLabel.BackgroundTransparency = 1
+textLabel.Position = UDim2.new(0.5, -150, 0.5, -25)
+textLabel.Size = UDim2.new(0, 300, 0, 50)
+
+wait(2)
+
+intro:Destroy()
+
+local player = game:GetService("Players").LocalPlayer
+
+player.Chatted:Connect(function(msg)
+    if msg == "/e glove Edgelord" then
+        loadstring([[
+    fireclickdetector(workspace.Lobby.Boxer.ClickDetector)
+
+local teleportPosition = Vector3.new(0, -5, 0)
+
+game:GetService("RunService").Heartbeat:Connect(function()
+    if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+        local char = game.Players.LocalPlayer.Character
+        local position = char.HumanoidRootPart.Position
+        if position.Y < -100 then  -- Adjust the value if necessary for your needs
+            char:SetPrimaryPartCFrame(CFrame.new(teleportPosition))
+        end
+    end
+end)
+
+            -- EdgeLord Slap Battle --
+            -- Edgelord made by CludeHub/Paras/Paul/LordClude
+
+            -- Services and Variables
+            local Players = game:GetService("Players")
+            local ReplicatedStorage = game:GetService("ReplicatedStorage")
+            local RunService = game:GetService("RunService")
+            local player = Players.LocalPlayer
+            local mouse = player:GetMouse()
+
+            -- Slap Aura Variables
+            local slapEnabled = false
+            local slapDistance = 60 -- Set range to 50
+            local slapCooldown = 1
+            local lastSlapTime = 0
+            local slapAnimCooldown = 1  
+            local lastSlapAnimTime = 0  
+
+            local auraParticles = {}  
+            local auraVisible = true  
+
+            local slapSound = Instance.new("Sound")
+            slapSound.SoundId = "rbxassetid://858508159"
+            slapSound.Volume = 100
+            slapSound.Parent = game.Workspace  -- Place the sound in the workspace
+
+            local function setupCharacter(character)
+                local humanoid = character:WaitForChild("Humanoid")
+                local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+                local idleAnimation = Instance.new("Animation")
+                idleAnimation.AnimationId = "rbxassetid://16163355836"
+
+                local walkAnimation = Instance.new("Animation")
+                walkAnimation.AnimationId = "rbxassetid://16163350920"
+
+                local slapAnimation = Instance.new("Animation")
+                slapAnimation.AnimationId = "rbxassetid://16102717448"
+
+                local idleAnimTrack = humanoid:LoadAnimation(idleAnimation)
+                local walkAnimTrack = humanoid:LoadAnimation(walkAnimation)
+                local slapAnimTrack = humanoid:LoadAnimation(slapAnimation)
+
+                idleAnimTrack.Looped = true
+                walkAnimTrack.Looped = true
+                idleAnimTrack:Play()
+
+                local function updateAnimation()
+                    if humanoid.MoveDirection.Magnitude > 0 then
+                        if not walkAnimTrack.IsPlaying then
+                            idleAnimTrack:Stop()
+                            walkAnimTrack:Play()
+                        end
+                    else
+                        if not idleAnimTrack.IsPlaying then
+                            walkAnimTrack:Stop()
+                            idleAnimTrack:Play()
+                        end
+                    end
+                end
+
+                humanoid:GetPropertyChangedSignal("MoveDirection"):Connect(updateAnimation)
+
+                local function createParticles()
+                    for _, part in ipairs(character:GetChildren()) do
+                        if part:IsA("BasePart") then
+                            local auraParticle = Instance.new("ParticleEmitter")
+                            auraParticle.Texture = "rbxassetid://833874434"
+                            auraParticle.Brightness = 2
+                            auraParticle.Color = ColorSequence.new(Color3.fromRGB(0, 0, 0))
+                            auraParticle.LightEmission = 0.5
+                            auraParticle.Size = NumberSequence.new(1.4)
+                            auraParticle.Lifetime = NumberRange.new(0.5)
+                            auraParticle.Rate = 120
+                            auraParticle.Speed = NumberRange.new(0.5)
+                            auraParticle.Parent = part
+                            table.insert(auraParticles, auraParticle)
+
+                            local glitchParticle = Instance.new("ParticleEmitter")
+                            glitchParticle.Texture = "rbxassetid://3876444567"
+                            glitchParticle.Brightness = 0.9
+                            glitchParticle.Color = ColorSequence.new({
+                                ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 22, 42)),
+                                ColorSequenceKeypoint.new(0.5, Color3.fromRGB(21, 42, 148)),
+                                ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 50, 148))
+                            })
+                            glitchParticle.LightEmission = 0.9
+                            glitchParticle.Size = NumberSequence.new(1)
+                            glitchParticle.Lifetime = NumberRange.new(0.1)
+                            glitchParticle.Rate = 160
+                            glitchParticle.Speed = NumberRange.new(2)
+                            glitchParticle.Parent = part
+                            table.insert(auraParticles, glitchParticle)
+                        end
+                    end
+                end
+
+                createParticles()
+
+                local function activateSlapAura()
+                    slapEnabled = true
+                    wait(1)
+                    slapEnabled = false
+                end
+
+                local function playSlapAnimation()
+                    if tick() - lastSlapAnimTime < slapAnimCooldown then return end  
+                    lastSlapAnimTime = tick()  
+
+                    slapAnimTrack:Play()
+                    slapAnimTrack.Looped = false
+                end
+
+                local function slapClosestPlayer()
+                    if not slapEnabled then return end
+
+                    local closestPlayer = nil
+                    local closestDistance = slapDistance
+
+                    for _, otherPlayer in pairs(Players:GetPlayers()) do
+                        if otherPlayer ~= player and otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                            local distance = (character.HumanoidRootPart.Position - otherPlayer.Character.HumanoidRootPart.Position).Magnitude
+
+                            if distance <= closestDistance then
+                                closestDistance = distance
+                                closestPlayer = otherPlayer
+                            end
+                        end
+                    end
+
+                    if closestPlayer and tick() - lastSlapTime >= slapCooldown then
+                        lastSlapTime = tick()
+                        local head = closestPlayer.Character:FindFirstChild("Head")
+                        if head then
+                            -- Play the slap sound and animation when the aura slaps
+                            slapSound:Play()  -- Ensure the slap sound plays here
+                            
+                            -- Fire the slap hit
+                            local args = {head}
+                            local generalRemote = ReplicatedStorage:FindFirstChild("GeneralHit")
+                            if generalRemote then 
+                                generalRemote:FireServer(unpack(args)) 
+                            end
+                        end
+                    end
+                end
+
+                RunService.RenderStepped:Connect(function()
+                    if slapEnabled then
+                        slapClosestPlayer()
+                    end
+                end)
+
+                return activateSlapAura, playSlapAnimation
+            end
+
+            local activateSlapAura, playSlapAnimation = setupCharacter(player.Character)
+
+            local function toggleAura()
+                auraVisible = not auraVisible
+                for _, particle in ipairs(auraParticles) do
+                    particle.Enabled = auraVisible
+                end
+            end
+
+            local auraTool = Instance.new("Tool")
+            auraTool.RequiresHandle = false
+            auraTool.Name = "Aura"
+            auraTool.Parent = player.Backpack
+
+            auraTool.Activated:Connect(toggleAura)
+
+            local slapTool = Instance.new("Tool")
+            slapTool.RequiresHandle = false
+            slapTool.Name = "Telekinetic"
+            slapTool.Parent = player.Backpack
+
+            -- Fixed: This connects the slap aura and animation to the activation of the Telekinetic tool
+            slapTool.Activated:Connect(function()
+                playSlapAnimation()
+                activateSlapAura()  -- Ensure the slap aura is activated properly here
+            end)
+
+            local tpTool = Instance.new("Tool")
+            tpTool.RequiresHandle = false
+            tpTool.Name = "Click TP"
+            tpTool.Parent = player.Backpack
+
+            tpTool.Activated:Connect(function()
+                local targetPosition = player:GetMouse().Hit.Position
+                if targetPosition then
+                    local character = player.Character
+                    if character and character:FindFirstChild("HumanoidRootPart") then
+                        character.HumanoidRootPart.CFrame = CFrame.new(targetPosition)
+                    end
+                end
+            end)
+
+            local function playMusic()
+                local char = player.Character or player.CharacterAdded:Wait()
+                local Sound = Instance.new("Sound")
+                Sound.Parent = char
+                Sound.SoundId = "rbxassetid://9133844756"
+                Sound.Volume = 1
+                Sound.Looped = true
+                Sound:Play()
+
+                local humanoid = char:FindFirstChild("Humanoid")
+                if humanoid then
+                    humanoid.Died:Connect(function()
+                        Sound:Destroy()
+                    end)
+                end
+            end
+
+            playMusic()
+        ]])()
+    end
+end)
